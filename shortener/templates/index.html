@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>URL shortener - Tomasz Król</title>
+    </head>
+    <body>
+        <h1>Jak korzystać z przykładowej aplikacji do skracania URLi:</h1>
+        <strong>Aplikacja działa po REST API</strong>
+        <p>Endpointy:
+            <ul>
+                <li>
+                    Wyślij POSTem content JSONa z właściwością 'target' na adres /shorten aby otrzymać skrócony link, np.:<br>
+                    url: <a href="/shorten">{{request.build_absolute_uri}}shorten</a><br>
+                    content: {"target":"https://ubuntu.com"}
+                    
+                </li>
+                <br>
+                <li>
+                    Wyślij POSTem JSONa z właściwością 'short' na adres /resolve aby otrzymać pełny URL, np.:<br>
+                    url: <a href="/resolve">{{request.build_absolute_uri}}resolve</a></br>
+                    content:{"short":"http://127.0.0.1:8000/shusxisd"}
+                </li>
+            </ul>
+        </p>
+    </body>
+</html>
